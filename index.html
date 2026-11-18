@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final Year BBQ | One Last Semester, A Lifetime of Memories</title>
+<meta name="description" content="Final Year BBQ – 21 November 2026 at IBBUL, Lapai Staff Quarters. Reserve your table now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#top">🔥 Final Year BBQ</a>
+  <div>
+    <a class="link" href="#packages">Packages</a>
+    <a class="link" href="#register">Register</a>
+    <a class="link" href="my-registration.html">My Registration</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap fade">
+  <div class="eyebrow">Graduating Class Celebration</div>
+  <h1 id="evName">Final Year BBQ</h1>
+  <p class="theme">One Last Semester, A Lifetime of Memories.</p>
+  <p class="meta" id="heroMeta">Loading event details…</p>
+  <div class="countdown" id="countdown" aria-live="polite">
+    <div class="cd"><b id="cdD">--</b><span>Days</span></div>
+    <div class="cd"><b id="cdH">--</b><span>Hours</span></div>
+    <div class="cd"><b id="cdM">--</b><span>Minutes</span></div>
+    <div class="cd"><b id="cdS">--</b><span>Seconds</span></div>
+  </div>
+  <a class="btn btn-gold" href="#register">Reserve My Table</a>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <h2>Event Information</h2><div class="gold-line"></div>
+  <p class="sub">Good food, great company, and the memories that will outlast the semester.</p>
+  <div class="grid g3">
+    <div class="card info-card"><div class="ico">📅</div><h3>Date</h3><p id="infoDate">—</p></div>
+    <div class="card info-card"><div class="ico">📍</div><h3>Venue</h3><p id="infoVenue">—</p></div>
+    <div class="card info-card"><div class="ico">🎓</div><h3>Theme</h3><p>One Last Semester, A Lifetime of Memories.</p></div>
+  </div>
+</div></section>
+
+<section class="section" id="packages" style="background:var(--cream-2)"><div class="wrap">
+  <h2>Choose Your Table</h2><div class="gold-line"></div>
+  <p class="sub">Tap a package to select it, then scroll down to register.</p>
+  <div class="grid g3" id="pkgGrid"><div class="card info-card">Loading packages…</div></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>How to Pay</h2><div class="gold-line"></div>
+  <p class="sub">Pay by transfer, then submit your receipt below.</p>
+  <div class="card pay form-card">
+    <h3>OPay Transfer</h3>
+    <div class="acct" id="acctNum">—</div>
+    <p id="acctName">—</p>
+    <p style="margin-top:14px;font-size:.9rem;opacity:.9">
+      1) Transfer the exact amount for your package. 2) Copy your OPay transaction reference.
+      3) Upload your receipt in the form below. Your seat is confirmed only after the organiser verifies your payment.
+    </p>
+  </div>
+</div></section>
+
+<section class="section" id="register" style="background:var(--cream-2)"><div class="wrap">
+  <h2>Register</h2><div class="gold-line"></div>
+  <p class="sub">Fill in your details and submit your payment proof.</p>
+
+  <form class="card form-card" id="regForm" novalidate>
+    <label for="fullName">Full name</label>
+    <input id="fullName" required maxlength="100" autocomplete="name" placeholder="e.g. Aisha Musa Bello">
+
+    <label for="phone">Phone number</label>
+    <input id="phone" required inputmode="tel" autocomplete="tel" placeholder="08012345678">
+
+    <label for="matric">Matric number <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+    <input id="matric" maxlength="30" placeholder="e.g. 18/1234">
+
+    <label for="package">Package</label>
+    <select id="package" required></select>
+
+    <label for="amount">Amount paid (₦)</label>
+    <input id="amount" type="number" min="1" step="1" required>
+    <div class="hint" id="amountHint"></div>
+
+    <label for="ref">OPay transaction reference</label>
+    <input id="ref" required minlength="6" maxlength="64" placeholder="Paste the reference from your OPay receipt">
+
+    <label for="receipt">Payment receipt <span style="font-weight:400;color:var(--muted)">(JPG, PNG, WEBP or PDF, max 2 MB)</span></label>
+    <input id="receipt" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf,image/jpeg,image/png,image/webp,application/pdf" required>
+
+    <div class="alert hidden" id="formMsg" role="alert"></div>
+    <button class="btn btn-gold" id="submitBtn" type="submit" style="width:100%;margin-top:18px">Submit Registration</button>
+  </form>
+
+  <div class="card form-card hidden" id="successCard" style="text-align:center">
+    <h3 style="color:var(--green)">🎉 Registration received!</h3>
+    <p>Save your private registration code. You need it to check your payment status and seat number.</p>
+    <div class="code-box"><div style="font-size:.8rem;letter-spacing:.2em">YOUR CODE</div><div class="code" id="regCode"></div></div>
+    <p class="hint">Take a screenshot now. Don't share this code with anyone.</p>
+    <p style="margin:12px 0">Status: <span class="badge b-pending">Pending verification</span></p>
+    <a class="btn btn-green" id="dashLink" href="my-registration.html">Open My Dashboard</a>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Contact</h2><div class="gold-line"></div>
+  <p class="sub">Questions about your registration or payment?</p>
+  <div class="card info-card form-card">
+    <h3 id="cName"></h3>
+    <p><a id="cTel" href="#" style="color:var(--green);font-weight:600"></a></p>
+    <p class="hint">Please include your registration code when you call.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>Final Year BBQ</b> · One Last Semester, A Lifetime of Memories.<br>
+<a href="admin.html" style="opacity:.5;font-size:.8rem">Organiser login</a></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

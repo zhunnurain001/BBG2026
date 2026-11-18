@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Registration | Final Year BBQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="brand" href="index.html">🔥 Final Year BBQ</a><a class="link" href="index.html">Home</a></div></nav>
+<div class="page-head"><h1>My Registration</h1><p>Enter your private code to see your status and seat.</p></div>
+
+<section class="section" style="padding-top:40px"><div class="wrap" style="max-width:680px">
+  <form class="card" id="lookup">
+    <label for="code" style="margin-top:0">Registration code</label>
+    <input id="code" placeholder="XXXX-XXXX-XXXX" maxlength="20" autocomplete="off" style="text-transform:uppercase;letter-spacing:.1em">
+    <div class="alert hidden" id="msg"></div>
+    <button class="btn btn-green" style="width:100%;margin-top:14px" type="submit">View my registration</button>
+  </form>
+
+  <div id="result" class="hidden fade" style="margin-top:24px">
+    <div id="seatBox"></div>
+    <div class="card" id="details"></div>
+    <div class="card" id="eventBox" style="margin-top:22px"></div>
+  </div>
+</div></section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/participant.js"></script>
+</body>
+</html>
